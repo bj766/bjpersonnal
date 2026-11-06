@@ -7,6 +7,12 @@ import HeroWorkStrip from './HeroWorkStrip'
 import ParallaxWorks, {ParallaxPanel} from './ParallaxWorks'
 
 const Arrow = () => <span aria-hidden="true">↗</span>
+function DominoLetters({text, start=0}) {
+  let order = start
+  return <span aria-hidden="true">{text.split(' ').map((word,index)=><React.Fragment key={index}>
+    {index>0?' ':null}<span className={text.includes(' ')?'domino-word':undefined}>{Array.from(word, (letter,i)=><span className="domino-letter" key={i} style={{'--domino-order':order++}}>{letter}</span>)}</span>
+  </React.Fragment>)}</span>
+}
 function App(){
   const [category,setCategory]=useState('全部作品'),[active,setActive]=useState(null),[playing,setPlaying]=useState(()=>!window.matchMedia('(prefers-reduced-motion: reduce)').matches),[notice,setNotice]=useState('')
   const dialogRef=useRef(null), returnFocus=useRef(null)
@@ -18,7 +24,7 @@ function App(){
     <header className="nav-wrap"><nav className="nav page-width" aria-label="主导航"><a className="wordmark" href="#home">DIRECTOR’S CUT<span>®</span></a><div className="nav-links"><a href="#about">关于我</a><a href="#projects">精选作品</a><a href="#strengths">我的优势</a></div><a className="button dark small" href="#contact">聊聊你的想法 <Arrow/></a></nav></header>
     <main>
       <section className="hero" id="home">
-        <div className="hero-intro page-width"><div className="eyebrow"><span className="status-dot"/> INDEPENDENT VIDEO DIRECTOR · 短视频编导</div><h1>让好故事，<br/><span>发生在镜头里。</span><i>Stories worth telling.</i></h1><div className="hero-bottom"><p>从一个灵感，到一次共鸣。<br/>用内容表达观点，用影像留下感受。</p><a href="#projects" className="text-link">探索我的作品 <span>↓</span></a></div><div className="round-stamp" aria-hidden="true">IDEA INTO STORY<br/><b>✳</b><br/>STORY INTO FRAME</div></div>
+        <div className="hero-intro page-width"><div className="eyebrow"><span className="status-dot"/> INDEPENDENT VIDEO DIRECTOR · 短视频编导</div><h1 className="hero-domino" aria-label="让好故事，发生在镜头里。 Stories worth telling."><DominoLetters text="让好故事，"/><br/><span className="hero-title-indent"><DominoLetters text="发生在镜头里。" start={5}/></span><i><DominoLetters text="Stories worth telling." start={12}/></i></h1><div className="hero-bottom"><p>从一个灵感，到一次共鸣。<br/>用内容表达观点，用影像留下感受。</p><a href="#projects" className="text-link">探索我的作品 <span>↓</span></a></div><div className="round-stamp" aria-hidden="true">IDEA INTO STORY<br/><b>✳</b><br/>STORY INTO FRAME</div></div>
         <div className="hero-film"><NeuralTunnel playing={playing}/><div className="film-shade"/><div className="film-top"><span>NEURAL FIELD / 001</span><span className="live">● &nbsp; IDEAS IN MOTION</span></div><div className="film-caption"><span>观察。感受。讲述。</span><p>EVERY FRAME HAS A REASON.</p></div><button className="film-control" onClick={()=>setPlaying(value=>!value)} aria-label={playing?'暂停隧道动画':'播放隧道动画'} aria-pressed={playing}>{playing?'Ⅱ':'▶'}</button><span className="demo-label">原创动态视觉 / NEURAL FIELD</span></div>
         <HeroWorkStrip items={projects} onOpen={openProject} videoOpen={!!active}/>
       </section>
