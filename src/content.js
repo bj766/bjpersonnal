@@ -10,9 +10,21 @@ export const profile = {
     {date:'2020 — 2024',title:'内蒙古科技大学 · 本科',text:'计算机科学与技术专业。把对用户认知和内容交互的理解用在短视频创作中，从观众视角设计开场和叙事节奏。'},
   ],
 }
-const work = (id,title,english,category,duration,description) => ({id,title,english,category,duration,description,image:`./media/works/${id}.jpg`,video:`./media/works/${id}.mp4`,roles:`全流程创作 / 选题 · 脚本 · 拍摄 · 出镜 · 剪辑`})
+const work = (id,title,english,category,duration,description,roles='全流程创作 / 选题 · 脚本 · 拍摄 · 出镜 · 剪辑') => ({id,title,english,category,duration,description,image:`./media/works/${id}.jpg`,video:`./media/works/${id}.mp4`,roles})
+const historyWork = (id,title,english,duration,description) => work(id,title,english,'包放历史讲堂',duration,description,'知识类 IP 项目 / IP 编导')
+const sociologyWork = (id,title,english,duration,description) => work(id,title,english,'沈奕斐',duration,description,'知识类 IP 项目 / 短视频编导实习')
 // 标题和分类按视频画面整理，不推测具体项目职责或播放成绩。
 export const projects = [
+  historyWork('12','为什么说中华文化是引领世界文明的灯塔？','CULTURE & CIVILIZATION','04:03','以人物口播展开，围绕中华文化与世界文明的关系讲述。'),
+  historyWork('13','什么是真正的恶？《西游记》早就说透了','A JOURNEY WEST','04:11','从《西游记》切入，借故事讨论如何理解真正的恶。'),
+  historyWork('14','倘若没有强大祖国，民族将会面临什么？','A NATION AT STAKE','02:28','以历史事件切入，讨论国家实力与民族处境的关系。'),
+  historyWork('15','只要有这样的人在，中国就不会亡','THOSE WHO STOOD','04:16','用人物口播讲述历史处境中的人物选择。'),
+  historyWork('16','岳飞的死，是整个民族的悲剧','THE TRAGEDY OF YUE FEI','06:53','以岳飞之死为切入点，讲述这位历史人物与他的时代。'),
+  sociologyWork('17','怎样培养出独立的孩子？','RAISING INDEPENDENCE','02:58','从亲子关系出发，讨论家长怎样为孩子的独立留出空间。'),
+  sociologyWork('18','让孩子懂得适应社会，比自信更重要','LEARNING TO ADAPT','03:31','围绕孩子的成长，讨论自信与适应社会的关系。'),
+  sociologyWork('19','好妈妈的「减」法：适度关注，助力成长','ROOM TO GROW','02:59','讨论家长如何把握关注的分寸，给孩子留出成长空间。'),
+  sociologyWork('20','学会聊「废话」，孩子会和你更亲近','SMALL TALK, REAL BONDS','02:43','以亲子间的日常闲聊为切入点，讨论怎样建立更亲近的关系。'),
+  sociologyWork('21','乐观的家长，能治愈孩子的一生','THE OPTIMISM WE SHARE','03:22','围绕家庭教育，讨论家长的情绪与态度对孩子成长的影响。'),
   work('03','走进日常，记录生活的片刻。','LIFE, IN FRAMES','生活记录','00:55','从户外景色到餐桌与室内片段，用日常画面记录生活。'),
   work('02','街头烟火里的生活切片。','AFTER HOURS','生活记录','01:12','夜间街市、摊位与行人，组成一次街头生活记录。'),
   work('08','把对话，放到真实场景里。','A CONVERSATION','街头互动','00:39','在户外场景中展开人物互动，以现场对话带动内容。'),
