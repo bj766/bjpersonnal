@@ -14,9 +14,9 @@ export default function ContactFunnel() {
     function point(i, u) {
       const rise = Math.max(0,(u-.32)/.68)
       const ground = Math.max(0,1-u/.32)
-      const angle = i*turn/48+u*turn*1.5-time*.32
+      const angle = (i%24)*turn/24+u*turn*1.5-time*.32
       const radius = spread*(.09+.91*ground**1.25+.74*rise**1.65)
-      return [width*.53+rise*width*.06+Math.cos(angle)*radius,
+      return [width/2+(i<24?1:-1)*Math.cos(angle)*radius,
         height*(.77-.74*rise)+Math.sin(angle)*radius*(.13+.07*rise)]
     }
     function draw() {
@@ -30,17 +30,19 @@ export default function ContactFunnel() {
           if(n===0) ctx.moveTo(x,y)
           else ctx.lineTo(x,y)
         }
-        ctx.globalAlpha = .42+.18*Math.sin(i*2.4+time*.6)
+        ctx.globalAlpha = .42+.18*Math.sin((i%24)*2.4+time*.6)
         ctx.stroke()
       }
       ctx.globalAlpha = 1
       ctx.fillStyle = ink
-      for(let i=0;i<144;i++) {
+      for(let i=0;i<72;i++) {
         const u = (i*.61803398875+time*(.045+(i%5)*.008))%1
-        const [x,y] = point(i%48,u)
-        ctx.beginPath()
-        ctx.arc(x,y,i%7===0?1.65:.9,0,turn)
-        ctx.fill()
+        const [x,y] = point(i%24,u)
+        for(const px of [x,width-x]) {
+          ctx.beginPath()
+          ctx.arc(px,y,i%7===0?1.65:.9,0,turn)
+          ctx.fill()
+        }
       }
     }
     function sync() {
