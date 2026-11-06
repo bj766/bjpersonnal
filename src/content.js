@@ -1,12 +1,13 @@
 export const profile = {
   name: '边江', role: '短视频编导', email: '1529547087@qq.com', wechat: '', phone: '18147163761',
-  introduction: '我是边江，计算机科学与技术专业本科毕业。做过家政垂类账号的新媒体运营，独立完成从选题、脚本、分镜到现场拍摄、后期剪辑与发布的完整流程。我关注观众为什么停下来，也关注一句话如何变成有节奏、有情绪的画面。',
+  introduction: '我是边江，短视频编导，参与过「包放历史讲堂」和「沈奕斐」两个知识类 IP 的抖音内容制作。我从育儿、婚恋和家庭沟通中的真实问题找选题，用历史故事或影视片段引出专业观点，再通过脚本和剪辑把一条视频的核心观点讲清楚。',
   portrait: './media/portrait.jpg', avatar: './media/avatar.png',
   heroPoster: './media/works/03.jpg', heroVideo: './media/showreel.mp4',
-  stats: [{value:'10+',label:'条垂类短视频产出'},{value:'11',label:'支作品收录'},{value:'本科',label:'计算机科学与技术'}],
+  stats: [{value:'2',label:'个知识类 IP 项目'},{value:'295',label:'条 · 包放历史讲堂账号作品'},{value:'19.8万',label:'赞 · 包放历史讲堂代表作'}],
   experience: [
-    {date:'2024.08 — 2024.12',title:'锋艳家政 · 新媒体运营',text:'独立负责家政垂类账号内容：选题策划、脚本、分镜、拍摄、剪辑与发布；累计产出 10+ 条短视频，并辅助准备直播素材。'},
-    {date:'2020 — 2024',title:'内蒙古科技大学 · 本科',text:'计算机科学与技术专业。从用户视角理解内容交互，将技术背景用于视频制作工具的学习与内容落地。'},
+    {date:'2025.04 — 2026.10',title:'深圳市远见优识文化有限公司 · IP 编导',project:'包放历史讲堂',url:'https://www.douyin.com/user/MS4wLjABAAAA4k8-XAm-5cosv5SfRQP9J-vW9HUbjnzYGWzhckI3UHs',text:'负责历史知识与家庭教育 IP 的选题、脚本、剪辑和发布，用历史故事回应孩子沉迷手机、青春期沟通等育儿问题。参与高赞内容复盘，通过视频结尾、置顶内容和评论答疑承接课程咨询。项目账号累计发布 295 条作品，两条代表作分别获赞 19.8 万和 12.3 万。'},
+    {date:'2023.10 — 2025.02',title:'世间万相 · 短视频编导实习生',project:'沈奕斐',url:'https://www.douyin.com/user/MS4wLjABAAAAdN0o_YrFmXWxpwe8wnTRozgW_hs7hgocDz19_zxj2tiJdxIRNgf_yr-aAje2_MYO',text:'协助搜集婚恋、家庭教育等领域的选题，整理影视与综艺素材，参与口播和素材剪辑、抖音发布与账号维护。剪辑时保留观点的上下文。项目账号三条置顶作品分别获赞 34.7 万、34 万和 12.5 万。'},
+    {date:'2020 — 2024',title:'内蒙古科技大学 · 本科',text:'计算机科学与技术专业。把对用户认知和内容交互的理解用在短视频创作中，从观众视角设计开场和叙事节奏。'},
   ],
 }
 const work = (id,title,english,category,duration,description) => ({id,title,english,category,duration,description,image:`./media/works/${id}.jpg`,video:`./media/works/${id}.mp4`,roles:`全流程创作 / 选题 · 脚本 · 拍摄 · 出镜 · 剪辑`})
@@ -25,7 +26,7 @@ export const projects = [
   work('01','从一段屏幕信息开始。','ON THE SCREEN','内容教程','00:23','通过手机界面录屏与字幕呈现操作和信息。'),
 ]
 export const strengths = [
-  {n:'01',title:'从用户需求里找选题。',en:'CONTENT STRATEGY',text:'有家政垂类账号实操经历，围绕真实生活场景做选题，关注开场钩子、信息结构与观众的观看理由。',tags:'垂类账号 · 选题策划 · 内容钩子'},
-  {n:'02',title:'从脚本，一直跟到成片。',en:'END-TO-END PRODUCTION',text:'独立完成脚本撰写、分镜设计、现场拍摄、剪辑、字幕配乐与发布，理解每个环节如何影响最终表达。',tags:'脚本分镜 · 拍摄剪辑 · 上线发布'},
-  {n:'03',title:'用技术背景，提高落地效率。',en:'TECH & EXECUTION',text:'计算机专业背景，能够学习并运用视频制作工具；结合观众视角调整叙事节奏，让创意落实为可执行的内容。',tags:'工具应用 · 视听节奏 · 执行落地'},
+  {n:'01',title:'从真实问题里找选题。',en:'CONTENT STRATEGY',text:'从婚恋、育儿和家庭沟通中提炼选题，用历史故事或影视片段引出观点。拆解对标账号的标题、开头和叙事结构，找到适合自身 IP 的表达。',tags:'知识类 IP · 选题策划 · 内容复盘'},
+  {n:'02',title:'用一个故事讲清一个观点。',en:'SCRIPT & EDITING',text:'把历史和社会学内容写成通俗的口播脚本，前三秒切入观众关心的问题。能用微单拍摄，并在剪辑中精简铺垫、把控节奏、保留观点的上下文。',tags:'口播脚本 · 微单拍摄 · 视频剪辑'},
+  {n:'03',title:'让内容接得住观众的需求。',en:'CONTENT OPERATIONS',text:'通过视频结尾、置顶内容和评论答疑承接课程咨询。使用 ChatGPT、WorkBuddy、即梦和 Lib TV 辅助创作，把常用提示词和步骤整理为可复用的技能包。',tags:'抖音运营 · 课程引导 · AI 辅助创作'},
 ]
