@@ -70,3 +70,7 @@
 .works .filters button.selected{background:#f5f3ed;color:#20211e;border-color:#f5f3ed}
 .works .parallax-works{border-color:#ffffff40}
 .works .parallax-heading,.works .parallax-heading>span:first-child,.works .parallax-role,.works .parallax-footnote{color:#d5d8ce}
+
+.contact{position:relative;isolation:isolate;background:radial-gradient(ellipse at 55% 36%,#f7edf3,#efeeea 70%)}
+.contact-funnel{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none;z-index:-1}
+.contact .thanks p,.contact .contact-details button>span,.contact .footer-bottom{color:#56564f}
