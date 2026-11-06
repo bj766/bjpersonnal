@@ -32,3 +32,27 @@
   32%,48%{transform:rotate(48deg);opacity:.6}
   82%{transform:rotate(-5deg);opacity:1}
 }
+
+/* Selected works: a scroll-driven tile sequence before the playable grid. */
+.tile-reveal{height:145svh}
+.tile-reveal-stage{position:sticky;top:6svh;height:84svh;max-height:780px;display:grid;place-items:center;overflow:hidden;isolation:isolate}
+.tile-reveal-images{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(7px,1.3vw,19px);align-content:center;width:min(74%,780px,84svh);margin:auto;pointer-events:none;z-index:-1}
+.tile-reveal-images img{aspect-ratio:4/3;height:auto;opacity:0;filter:saturate(.75) brightness(.76)}
+.tile-reveal-title{text-align:center;max-width:100%;padding:17px 24px;background:#f5f3edef}
+.tile-reveal-title h2{font-family:'Noto Serif SC','SimSun',serif;font-size:clamp(30px,5vw,78px);font-weight:500;line-height:1.15;letter-spacing:-.045em;margin:8px 0 0}
+.tile-work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.tile-work-grid .parallax-card{border-radius:3px;transform:none}
+.tile-work-grid .parallax-card:focus-visible{outline-offset:3px}
+@media(max-width:700px){
+  .tile-reveal{height:115svh}
+  .tile-reveal-stage{top:8svh;height:66svh}
+  .tile-reveal-images{width:92%}
+  .tile-reveal-title{padding:13px 11px}
+  .tile-work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+}
+@media(max-width:380px){.tile-work-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+  .tile-reveal,.tile-reveal-stage{height:auto}
+  .tile-reveal-stage{position:static;padding:28px 0}
+  .tile-reveal-images{display:none}
+}
