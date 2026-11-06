@@ -71,6 +71,10 @@
 .works .parallax-works{border-color:#ffffff40}
 .works .parallax-heading,.works .parallax-heading>span:first-child,.works .parallax-role,.works .parallax-footnote{color:#d5d8ce}
 
-.contact{position:relative;isolation:isolate;background:radial-gradient(ellipse at 55% 36%,#f7edf3,#efeeea 70%)}
+.contact{position:relative;isolation:isolate;background:radial-gradient(ellipse at 55% 36%,#332735,#21251f 48%,#101612 78%);color:#f5f3ed;border-color:#ffffff40}
 .contact-funnel{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none;z-index:-1}
-.contact .thanks p,.contact .contact-details button>span,.contact .footer-bottom{color:#56564f}
+.contact .thanks p,.contact .contact-details button>span,.contact .footer-bottom{color:#d5d8ce}
+.contact .contact-details,.contact .footer-bottom,.contact .back-top{border-color:#ffffff40}
+.contact .thanks .button{background:#f5f3ed;color:#20211e}
+.contact .thanks .button:hover{background:#ead8e4}
+.contact .pink-strip{color:#20151b}
