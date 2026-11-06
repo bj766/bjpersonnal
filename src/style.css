@@ -106,3 +106,11 @@ body{isolation:isolate}
   100%{transform:scale(1.16);opacity:0}
 }
 @keyframes glimmer-catch{0%,100%{opacity:.23}46%{opacity:.8}}
+
+.contact-card{width:min(420px,calc(100% - 32px));max-height:calc(100svh - 32px)}
+.contact-card h2{font-size:21px;margin:0}
+.contact-card-body{text-align:center;padding:0 22px 22px}
+.contact-card-body p{font-size:13px;color:#d5d8ce;margin:0 0 14px}
+.contact-card-qr{width:min(280px,100%);height:auto;max-height:57svh;object-fit:contain;margin:auto}
+.contact-card-links{display:flex;justify-content:center;gap:22px;margin-top:16px;font-size:13px}
+.contact-card-links a{padding:6px 0;border-bottom:1px solid var(--line)}
