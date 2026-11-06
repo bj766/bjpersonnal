@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client'
 import {profile, projects, strengths} from './content'
 import './style.css'
 import NeuralTunnel from './NeuralTunnel'
+import GlimmerWrap from './GlimmerWrap'
 import ContactFunnel from './ContactFunnel'
 import HeroWorkStrip from './HeroWorkStrip'
 import {ParallaxPanel, TileReveal, TileWorks} from './ParallaxWorks'
@@ -25,7 +26,7 @@ function App(){
     <div className="site-backdrop" aria-hidden="true"><NeuralTunnel playing={playing&&!active}/></div>
     <header className="nav-wrap"><nav className="nav page-width" aria-label="主导航"><a className="wordmark" href="#home">DIRECTOR’S CUT<span>®</span></a><div className="nav-links"><a href="#about">关于我</a><a href="#projects">精选作品</a><a href="#strengths">我的优势</a></div><a className="button dark small" href="#contact">聊聊你的想法 <Arrow/></a></nav></header>
     <main>
-      <section className="hero" id="home">
+      <section className="hero hero-glimmer" id="home"><GlimmerWrap/>
         <div className="hero-intro page-width"><div className="eyebrow"><span className="status-dot"/> INDEPENDENT VIDEO DIRECTOR · 短视频编导</div><h1 className="hero-domino" aria-label="让好故事，发生在镜头里。 Stories worth telling."><DominoLetters text="让好故事，"/><br/><span className="hero-title-indent"><DominoLetters text="发生在镜头里。" start={5}/></span><i><DominoLetters text="Stories worth telling." start={12}/></i></h1><div className="hero-bottom"><p>从一个灵感，到一次共鸣。<br/>用内容表达观点，用影像留下感受。</p><a href="#projects" className="text-link">探索我的作品 <span>↓</span></a></div><div className="round-stamp" aria-hidden="true">IDEA INTO STORY<br/><b>✳</b><br/>STORY INTO FRAME</div></div>
         <HeroWorkStrip items={projects} onOpen={openProject} videoOpen={!!active}/>
       </section>

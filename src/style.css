@@ -83,7 +83,7 @@ body{isolation:isolate}
 .outro-line span{color:#f5f3ed}
 .nav .button{background:#f5f3ed;color:#20211e}
 .nav .button:hover{background:#ead8e4}
-.strengths-parallax .parallax-gallery{background:#10161270;border-color:var(--line)}
+.strengths-parallax .parallax-gallery{background:none;border:0;overflow:visible}
 .strengths-parallax .strength{background:#242822eb;color:#f5f3ed;border-color:var(--line)}
 .strengths-parallax .strength-02{background:#322a35eb}
 .strengths-parallax .strength-03{background:#1d2b25eb}
@@ -91,3 +91,18 @@ body{isolation:isolate}
 
 .contact{position:relative;isolation:isolate;background:radial-gradient(ellipse at 50% 36%,#332735,#21251f 48%,#101612 78%)}
 .contact-funnel{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none;z-index:-1}
+
+.hero-glimmer{position:relative;isolation:isolate;background:radial-gradient(ellipse at 66% 39%,#2a232e 0%,#1b231e 48%,#101612 83%)}
+.glimmer-wrap{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;pointer-events:none;z-index:-1}
+.glimmer-layer{transform-origin:50% 50%;opacity:.65}
+.glimmer-flash{opacity:.45}
+@media(prefers-reduced-motion:no-preference){
+  .glimmer-layer{animation:glimmer-drift 14s linear infinite}
+  .glimmer-flash{animation:glimmer-catch 4s ease-in-out infinite}
+}
+@keyframes glimmer-drift{
+  0%{transform:scale(.92);opacity:0}
+  20%,77%{opacity:.8}
+  100%{transform:scale(1.16);opacity:0}
+}
+@keyframes glimmer-catch{0%,100%{opacity:.23}46%{opacity:.8}}
