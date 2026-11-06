@@ -60,12 +60,12 @@ export function TileReveal({items}) {
   </div>
 }
 
-export function TileWorks({items, onOpen}) {
+export function TileWorks({items, onOpen, onPreview, onPreviewEnd}) {
   return <div className="parallax-works">
     <div className="parallax-heading"><span>IN FOCUS / {String(items.length).padStart(2,'0')} FILMS</span><span>点击播放作品 ↗</span></div>
       <div className="tile-work-grid">
         {items.map(project=><div key={project.id}>
-          <button className="parallax-card" aria-label={`播放作品：${project.title}`} onClick={event=>onOpen(project,event)}>
+          <button className="parallax-card" aria-label={`播放作品：${project.title}`} onPointerEnter={event=>onPreview(project,event)} onPointerLeave={onPreviewEnd} onClick={event=>onOpen(project,event)}>
             <img src={project.image} alt="" loading="lazy" draggable="false"/>
             <span className="parallax-shade"/>
             <span className="parallax-meta"><span>{project.id} / {project.category}</span><span>{project.duration}</span></span>

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 
-export default function HeroWorkStrip({items, onOpen, videoOpen}) {
+export default function HeroWorkStrip({items, onOpen, onPreview, onPreviewEnd, videoOpen}) {
   const trackRef = useRef(null), drag = useRef(null)
   const interaction = useRef({hover:false, focus:false, resumeAt:0})
   useEffect(()=>{
@@ -55,7 +55,7 @@ export default function HeroWorkStrip({items, onOpen, videoOpen}) {
       onPointerUp={()=>{if(drag.current) drag.current.ended=true}}
       onPointerCancel={()=>{drag.current=null}}
       onClickCapture={event=>{if(drag.current?.moved){event.preventDefault();event.stopPropagation();drag.current=null}}}>
-      {[...items,...items].map((project,index)=><button className="hero-reel-card" key={`${index}-${project.id}`} tabIndex={index>=items.length?-1:0} aria-hidden={index>=items.length?true:undefined} onClick={event=>onOpen(project,event)} aria-label={`播放作品：${project.title}`}>
+      {[...items,...items].map((project,index)=><button className="hero-reel-card" key={`${index}-${project.id}`} tabIndex={index>=items.length?-1:0} aria-hidden={index>=items.length?true:undefined} onPointerEnter={event=>onPreview(project,event)} onPointerLeave={onPreviewEnd} onClick={event=>onOpen(project,event)} aria-label={`播放作品：${project.title}`}>
         <img src={project.image} alt="" draggable="false"/>
         <span className="hero-reel-number">{project.id} / {project.category}</span><span className="hero-reel-play" aria-hidden="true">↗</span>
         <span className="hero-reel-title">{project.english}<small>{project.title}</small></span><span className="hero-reel-duration">{project.duration}</span>

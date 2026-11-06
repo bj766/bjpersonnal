@@ -114,3 +114,8 @@ body{isolation:isolate}
 .contact-card-qr{width:min(280px,100%);height:auto;max-height:57svh;object-fit:contain;margin:auto}
 .contact-card-links{display:flex;justify-content:center;gap:22px;margin-top:16px;font-size:13px}
 .contact-card-links a{padding:6px 0;border-bottom:1px solid var(--line)}
+
+.project-player{position:relative}
+.video-status{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px);padding:7px 12px;border-radius:18px;background:#101612e8;color:#f5f3ed;font-size:12px;pointer-events:none}
+.video-error{display:flex;align-items:center;gap:10px;pointer-events:auto}
+.video-error button{border-radius:14px;padding:4px 10px;background:#f5f3ed;color:#20211e}
