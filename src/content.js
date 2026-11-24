@@ -6,7 +6,7 @@ export const profile = {
   stats: [{value:'2',label:'个知识类 IP 项目'},{value:'295',label:'条 · 包放历史讲堂账号作品'},{value:'19.8万',label:'赞 · 包放历史讲堂代表作'}],
   experience: [
     {date:'2025.04 — 2026.10',title:'深圳市远见优识文化有限公司 · IP 编导',project:'包放历史讲堂',url:'https://www.douyin.com/user/MS4wLjABAAAA4k8-XAm-5cosv5SfRQP9J-vW9HUbjnzYGWzhckI3UHs',text:'负责历史知识与家庭教育 IP 的选题、脚本、剪辑和发布，用历史故事回应孩子沉迷手机、青春期沟通等育儿问题。参与高赞内容复盘，通过视频结尾、置顶内容和评论答疑承接课程咨询。项目账号累计发布 295 条作品，两条代表作分别获赞 19.8 万和 12.3 万。'},
-    {date:'2023.10 — 2025.02',title:'世间万相 · 短视频编导实习生',project:'沈奕斐',url:'https://www.douyin.com/user/MS4wLjABAAAAdN0o_YrFmXWxpwe8wnTRozgW_hs7hgocDz19_zxj2tiJdxIRNgf_yr-aAje2_MYO',text:'协助搜集婚恋、家庭教育等领域的选题，整理影视与综艺素材，参与口播和素材剪辑、抖音发布与账号维护。剪辑时保留观点的上下文。项目账号三条置顶作品分别获赞 34.7 万、34 万和 12.5 万。'},
+    {date:'2023.10 — 2025.02',title:'深圳看见文化 · 短视频编导实习生',project:'沈奕斐',url:'https://www.douyin.com/user/MS4wLjABAAAAdN0o_YrFmXWxpwe8wnTRozgW_hs7hgocDz19_zxj2tiJdxIRNgf_yr-aAje2_MYO',text:'协助搜集婚恋、家庭教育等领域的选题，整理影视与综艺素材，参与口播和素材剪辑、抖音发布与账号维护。剪辑时保留观点的上下文。项目账号三条置顶作品分别获赞 34.7 万、34 万和 12.5 万。'},
     {date:'2020 — 2024',title:'内蒙古科技大学 · 本科',text:'计算机科学与技术专业。把对用户认知和内容交互的理解用在短视频创作中，从观众视角设计开场和叙事节奏。'},
   ],
 }
